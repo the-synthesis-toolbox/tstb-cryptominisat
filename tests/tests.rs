@@ -123,6 +123,12 @@ fn sugared_xor_code() {
 }
 
 #[test]
+fn time_test() {
+    let mut s = Solver::new();
+    s.set_max_time(50.0);
+}
+
+#[test]
 fn assumptions_test() {
     let mut s = Solver::new();
     let a = s.new_var();
