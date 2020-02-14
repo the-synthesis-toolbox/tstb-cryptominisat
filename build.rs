@@ -22,7 +22,7 @@ fn main() {
                    .define("NOVALGRIND", "ON")
                    .define("ENABLE_TESTING", "OFF")
                    .build();
-  //println!("cargo:rustc-flags=-L {}/lib", dst.display());
+  println!("cargo:rustc-flags=-L {}/lib", dst.display());
   println!("cargo:rustc-link-search=native={}/lib", dst.display());
   println!("cargo:rustc-link-lib=static=cryptominisat5");
   
