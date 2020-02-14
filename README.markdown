@@ -1,7 +1,15 @@
 Rust bindings for CryptoMiniSat
 ===========================================
 
-This provides Rust bindings for CryptoMiniSat, an open source SAT solver, written in C++. You can find more information about it [here](https://github.com/msoos/cryptominisat).
+This provides Rust bindings for CryptoMiniSat, an open source SAT solver, written in C++. You can find more information about it [here](https://github.com/msoos/cryptominisat). To build:
+
+```
+git clone https://github.com/msoos/cryptominisat-rs
+cd cryptominisat-rs
+git submodule init
+git submodule update --init
+cargo test
+```
 
 Basic Usage
 -----
