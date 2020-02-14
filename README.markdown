@@ -8,6 +8,7 @@ git clone https://github.com/msoos/cryptominisat-rs
 cd cryptominisat-rs
 git submodule init
 git submodule update --init
+cargo build --release
 cargo test
 ```
 
