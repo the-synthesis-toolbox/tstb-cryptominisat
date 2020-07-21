@@ -97,6 +97,7 @@ extern "C" {
     fn cmsat_set_no_bve(this: *mut SATSolver);
     fn cmsat_set_up_for_scalmc(this: *mut SATSolver);
     fn cmsat_set_yes_comphandler(this: *mut SATSolver);
+    fn cmsat_print_stats(this: *mut SATSolver);
     fn cmsat_set_max_time(this: *mut SATSolver, max_time: f64);
 }
 
@@ -199,6 +200,9 @@ impl Solver {
     }
     pub fn set_up_for_scalmc(&mut self) {
         unsafe { cmsat_set_up_for_scalmc(self.0) }
+    }
+    pub fn print_stats(&mut self) {
+        unsafe { cmsat_print_stats(self.0) }
     }
 
     pub fn set_yes_comphandler(&mut self) {
