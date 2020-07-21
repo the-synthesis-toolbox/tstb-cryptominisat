@@ -95,6 +95,7 @@ extern "C" {
     fn cmsat_set_no_equivalent_lit_replacement(this: *mut SATSolver);
     fn cmsat_set_no_bva(this: *mut SATSolver);
     fn cmsat_set_no_bve(this: *mut SATSolver);
+    fn cmsat_set_up_for_scalmc(this: *mut SATSolver);
     fn cmsat_set_yes_comphandler(this: *mut SATSolver);
     fn cmsat_set_max_time(this: *mut SATSolver, max_time: f64);
 }
@@ -195,6 +196,9 @@ impl Solver {
     }
     pub fn set_no_bve(&mut self) {
         unsafe { cmsat_set_no_bve(self.0) }
+    }
+    pub fn set_up_for_scalmc(&mut self) {
+        unsafe { cmsat_set_up_for_scalmc(self.0) }
     }
 
     pub fn set_yes_comphandler(&mut self) {
