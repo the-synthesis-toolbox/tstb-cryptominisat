@@ -90,6 +90,7 @@ extern "C" {
     fn cmsat_set_verbosity(this: *mut SATSolver, n: u32);
     fn cmsat_set_num_threads(this: *mut SATSolver, n: u32);
     fn cmsat_set_default_polarity(this: *mut SATSolver, polar: bool);
+    fn cmsat_set_polarity_auto(this: *mut SATSolver);
     fn cmsat_set_no_simplify(this: *mut SATSolver);
     fn cmsat_set_no_simplify_at_startup(this: *mut SATSolver);
     fn cmsat_set_no_equivalent_lit_replacement(this: *mut SATSolver);
@@ -183,6 +184,10 @@ impl Solver {
     pub fn set_default_polarity(&mut self, polar: bool) {
         unsafe { cmsat_set_default_polarity(self.0, polar) }
     }
+    pub fn set_polarity_auto(&mut self) {
+        unsafe { cmsat_set_polarity_auto(self.0) }
+    }
+
     pub fn set_no_simplify(&mut self) {
         unsafe { cmsat_set_no_simplify(self.0) }
     }
