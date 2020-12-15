@@ -9,6 +9,7 @@ readme = "README.markdown"
 repository = "https://github.com/storyyeller/cryptominisat-rs"
 description = "Rust bindings for CryptoMiniSat, a boolean satisfiability solver"
 keywords = ["SAT"]
+homepage = "https://github.com/msoos/cryptominisat"
 
 exclude = [
     "cryptominisat/debian/*",
