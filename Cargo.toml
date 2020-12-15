@@ -1,13 +1,13 @@
 [package]
 name = "cryptominisat"
 version = "5.8.0"
-authors = ["Robert Grosse <n210241048576@gmail.com>"]
+authors = ["Mate Soos <soos.mate@gmail.com>"]
 links = "cryptominisat5"
 build = "build.rs"
 license = "MIT"
 readme = "README.markdown"
 repository = "https://github.com/storyyeller/cryptominisat-rs"
-description = "Rust bindings for Cryptominisat, a boolean satisfiability solver"
+description = "Rust bindings for CryptoMiniSat, a boolean satisfiability solver"
 keywords = ["SAT"]
 
 exclude = [
