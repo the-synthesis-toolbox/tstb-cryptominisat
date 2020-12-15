@@ -1,6 +1,6 @@
 [package]
 name = "cryptominisat"
-version = "5.8.0"
+version = "5.8.0-rust1"
 authors = ["Robert Grosse <n210241048576@gmail.com>", "Mate Soos <soos.mate@gmail.com>"]
 links = "cryptominisat5"
 build = "build.rs"
