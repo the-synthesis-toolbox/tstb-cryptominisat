@@ -21,7 +21,7 @@ exclude = [
 
 
 [dependencies]
-libc = "0.2.0"
+libc = "0.2.81"
 
 [build-dependencies]
-cmake = "0.1.17"
+cmake = "0.1.45"
