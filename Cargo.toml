@@ -1,7 +1,7 @@
 [package]
 name = "cryptominisat"
 version = "5.8.0"
-authors = ["Mate Soos <soos.mate@gmail.com>"]
+authors = ["Robert Grosse <n210241048576@gmail.com>", "Mate Soos <soos.mate@gmail.com>"]
 links = "cryptominisat5"
 build = "build.rs"
 license = "MIT"
