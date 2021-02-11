@@ -25,4 +25,9 @@ exclude = [
 libc = "0.2.81"
 
 [build-dependencies]
-cmake = "0.1.45"
+cmake = "0.1.48"
+
+
+[features]
+largemem = []
+
