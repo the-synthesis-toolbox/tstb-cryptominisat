@@ -14,6 +14,7 @@ use std::slice;
 pub const MAX_NUM_VARS: size_t = (1 << 28) - 1;
 
 // cryptominisat types
+#[derive(Debug)]
 enum SATSolver {} // opaque pointer
 
 #[repr(C)]
@@ -109,12 +110,15 @@ extern "C" {
     fn cmsat_set_max_time(this: *mut SATSolver, max_time: f64);
 }
 
+#[derive(Debug)]
 pub struct Solver(*mut SATSolver);
 impl Drop for Solver {
     fn drop(&mut self) {
         unsafe { cmsat_free(self.0) };
     }
 }
+unsafe impl Send for Solver {}
+unsafe impl Sync for Solver {}
 impl Solver {
     /// Create new solver instance
     pub fn new() -> Solver {
