@@ -17,13 +17,20 @@ fn main() {
         .define("ENABLE_PYTHON_INTERFACE", "OFF")
         .define("ONLY_SIMPLE", "ON")
         .define("NOZLIB", "ON")
-        .define("NOM4RI", "ON")
         .define("STATS", "OFF")
         .define("NOVALGRIND", "ON")
         .define("ENABLE_TESTING", "OFF");
     #[cfg(feature = "largemem")]
     {
         cfg.define("LARGEMEM", "ON");
+    }
+    #[cfg(feature = "m4ri")]
+    {
+        cfg.define("NOM4RI", "OFF");
+    }
+    #[cfg(not(feature = "m4ri"))]
+    {
+        cfg.define("NOM4RI", "ON");
     }
     let dst = cfg.build();
     //println!("cargo:rustc-flags=-L {}/lib", dst.display());
